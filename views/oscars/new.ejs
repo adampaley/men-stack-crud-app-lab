@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Add an Actor</title>
+  </head>
+  <body>
+    <a href="/oscars/">Back to Oscar Winner and Nominated Actors List</a>
+    <h1>Create a New Actor Profile!</h1>
+    <form action="/oscars" method="POST">
+        <label for="name">Name:</label>
+        <input type="text" name="name" id="name" />
+    
+        <label for="isAnOscarWinner">Won an Oscar?</label>
+        <input type="checkbox" name="isAnOscarWinner" id="isAnOscarWinner" />
+    
+        <button type="submit">Add Actor</button>
+      </form>
+  </body>
+</html>

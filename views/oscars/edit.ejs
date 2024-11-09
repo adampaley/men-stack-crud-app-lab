@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Edit an Actor's Profile</title>
+  </head>
+  <body>
+    <a href="/oscars/">Back to Oscar Winner and Nominated Actors List</a>
+    <h1>Edit <%= actor.name %></h1>
+    <form action="/oscars/<%=actor._id%>?_method=PUT" method="POST">
+        <label for="name">Name:</label>
+        <input type="text" name="name" id="name" value="<%= actor.name %>"/>
+    
+        <label for="isAnOscarWinner">Won an Oscar?</label>
+        <input type="checkbox" name="isAnOscarWinner" id="isAnOscarWinner" <% if (actor.isAnOscarWinner) { %> checked <% } %> />
+    
+        <button type="submit">Update Actor's Profile</button>
+      </form>
+  </body>
+</html>

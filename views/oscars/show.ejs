@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= actor.name %></title>
+  </head>
+  <body>
+    <h1><%= actor.name %></h1>
+    <% if (actor.isAnOscarWinner) { %>
+        <p>This actor won an Oscar!</p>
+    <% } else { %> 
+        <p>It's an honor just to be nominated!</p>
+    <% } %>
+    <form action="/oscars/<%=actor._id%>?_method=DELETE" method="post">
+        <button type="submit">Delete <%= actor.name %>?</button>
+    </form>
+    <a href="/oscars/<%= actor._id %>/edit">Edit <%= actor.name %></a>
+    <a href="/oscars/">Back to list of Oscar Winners and Nominees</a>
+  </body>
+</html>
